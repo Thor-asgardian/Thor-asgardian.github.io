@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Corporate Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: right 0.3s ease-in-out;
+            z-index: 1100;
+            padding-top: 60px;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .mobile-menu ul li {
+            margin: 10px 0;
+        }
+
+        .mobile-menu ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .mobile-menu ul li a:hover {
+            background: #007bff;
+        }
+
+        .dropdown {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .dropdown a {
+            font-size: 16px;
+            padding: 8px;
+            width: 100%;
+        }
+
+        .dropdown.active {
+            display: flex;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="nav">
+            <h1>YourBusiness</h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-menu" onclick="toggleMenu()">&times;</button>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleDropdown()">Menu ▼</a>
+                    <div class="dropdown" id="dropdownMenu">
+                        <a href="#home" onclick="toggleMenu()">Home</a>
+                        <a href="#about" onclick="toggleMenu()">About us</a>
+                        <a href="#services" onclick="toggleMenu()">Services</a>
+                        <a href="#team" onclick="toggleMenu()">Our team</a>
+                        <a href="#contact" onclick="toggleMenu()">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <div id="home" class="video-container">
+            <video playsinline autoplay muted loop id="bgvid">
+                <source src="videobg.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="header">
+            <h1>This is a business Website.</h1>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="container-fluid">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officia sint nemo omnis nisi debitis alias, provident, hic iste natus molestiae inventore culpa sed quia esse quae numquam, quo enim?</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="container-fluid">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 service-item">
+                    <h3>Web Development</h3>
+                    <p>Modern, scalable, and responsive websites.</p>
+                </div>
+                <div class="col-md-4 service-item">
+                    <h3>Digital Marketing</h3>
+                    <p>Strategies to grow online reach and engagement.</p>
+                </div>
+                <div class="col-md-4 service-item">
+                    <h3>Consulting</h3>
+                    <p>Expert advice for business optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="team" class="container-fluid">
+            <h2>Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="team1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="team2.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Chief Marketing Officer</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="team3.jpg" alt="Alice Johnson">
+                    <h3>Alice Johnson</h3>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container-fluid">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3">
+                <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3">
+                <textarea name="message" placeholder="Your Message" required class="form-control mb-3"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 YourBusiness. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+
+        function toggleDropdown() {
+            document.getElementById("dropdownMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
