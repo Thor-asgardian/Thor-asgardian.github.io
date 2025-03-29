@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Corporate Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <title>Complete Corporate Website</title>
+      <link rel="stylesheet" href="Stylesheet.css">
+</head>
+
+<body>
+      <div class="wrapper">
+            <!-- Navbar -->
+            <nav class="nav">
+                  <h1>YourBusiness</h1>
+                  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                  <ul id="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Our team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+                  </ul>
+            </nav>
+
+            <!-- Hero Section -->
+            <section id="home">
+                  <img src="Office.jpg" alt="Office Image" class="img-fluid">
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="container">
+                  <h2>About Us</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="container">
+                  <h2>Our Services</h2>
+                  <div class="row">
+                        <div class="col-md-4 service-item">
+                              <h3>Web Development</h3>
+                              <p>Modern, scalable, and responsive websites.</p>
+                        </div>
+                        <div class="col-md-4 service-item">
+                              <h3>Digital Marketing</h3>
+                              <p>Strategies to grow online reach and engagement.</p>
+                        </div>
+                        <div class="col-md-4 service-item">
+                              <h3>Consulting</h3>
+                              <p>Expert advice for business optimization.</p>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="container">
+                  <h2>Contact Us</h2>
+                  <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3">
+                        <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3">
+                        <textarea name="message" placeholder="Your Message" required
+                              class="form-control mb-3"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                  </form>
+            </section>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+            <p>&copy; 2025 YourBusiness. All Rights Reserved.</p>
+      </footer>
+
+      <!-- Scripts -->
+      <script>
+            function toggleMenu() {
+                  document.getElementById("menu").classList.toggle("active");
+              }
+      </script>
+</body>
+
+</html>
