@@ -12,62 +12,54 @@
 
 <body>
     <div class="wrapper">
-        <!-- Navbar -->
         <nav class="nav">
-            <h1>Sthavir  Engineering Solutions Ltd.</h1>
+            <img src="Sthavir2.png" alt="Logo" class="logo">
+            <h1>Sthavir Engineering Solutions Ltd.</h1>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </nav>
 
-        <!-- Mobile Dropdown Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <button class="close-menu" onclick="toggleMenu()">&times;</button>
             <ul>
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About us</a></li>
                 <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#placements" onclick="toggleMenu()">Placements</a></li>
                 <li><a href="#team" onclick="toggleMenu()">Our team</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
-        </div>        
-        
-        <!-- Hero Section -->
+        </div>
+
         <div id="home" class="video-container">
-            <video playsinline autoplay muted loop id="bgvid">
+            <video playsinline autoplay muted loop>
                 <source src="videobg.mp4" type="video/mp4">
             </video>
         </div>
 
-        <div class="header">
-            <h1>Sthavir  Engineering Solutions Ltd.</h1>
-        </div>
-
-        <!-- About Section -->
-        <section id="about" class="container-fluid">
+        <section id="about" class="container">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officia sint nemo omnis nisi debitis alias, provident, hic iste natus molestiae inventore culpa sed quia esse quae numquam, quo enim?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="container-fluid">
+        <section id="services" class="container">
             <h2>Our Services</h2>
             <div class="row">
-                <div class="col-md-4 service-item">
+                <div class="col-md-4">
                     <h3>Web Development</h3>
                     <p>Modern, scalable, and responsive websites.</p>
                 </div>
-                <div class="col-md-4 service-item">
+                <div class="col-md-4">
                     <h3>Digital Marketing</h3>
                     <p>Strategies to grow online reach and engagement.</p>
                 </div>
-                <div class="col-md-4 service-item">
+                <div class="col-md-4">
                     <h3>Consulting</h3>
                     <p>Expert advice for business optimization.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Our Team Section -->
-        <section id="team" class="container-fluid">
+        <section id="team" class="container">
             <h2>Our Team</h2>
             <div class="row">
                 <div class="col-md-4 team-member">
@@ -88,32 +80,15 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="container-fluid">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3">
-                <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3">
-                <textarea name="message" placeholder="Your Message" required class="form-control mb-3"></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </section>
+        <footer class="footer">
+            <p>&copy; 2025 Sthavir Engineering Solutions Ltd. All Rights Reserved.</p>
+        </footer>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 YourBusiness. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Scripts -->
     <script>
         function toggleMenu() {
             document.getElementById("mobileMenu").classList.toggle("active");
         }
-
-        function toggleDropdown() {
-            document.getElementById("dropdownMenu").classList.toggle("active");
-        }
     </script>
 </body>
-
 </html>
