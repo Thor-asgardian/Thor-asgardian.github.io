@@ -5,15 +5,10 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .wrapper {
-    max-width: auto;
     width: 100%;
-    margin: auto;
 }
 
 /* Navbar */
@@ -26,17 +21,13 @@ body {
     color: white;
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    max-width: auto;
     z-index: 1000;
-    height: 60px;
 }
 
 .nav h1 {
     margin: 0;
-    padding-left: 20px;
 }
 
 .nav ul {
@@ -45,7 +36,6 @@ body {
     gap: 15px;
     margin: 0;
     padding: 0;
-    margin-left: auto;
     padding-right: 20px;
 }
 
@@ -53,97 +43,20 @@ body {
     padding: 5px;
 }
 
+/* Navbar Links */
 .nav ul li a {
-    color: white;
+    color: white !important;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav ul li a:hover {
-    color: #007bff;
+    color: #ffcc00 !important; /* Gold hover effect */
 }
 
-.menu-toggle,
-.close-menu {
-    display: flex;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-}
-
-/* Hero Section */
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: 60px;
-}
-
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.video-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1b1b1b;
-    opacity: 0.8;
-}
-
-.header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    text-align: center;
-}
-
-.header h1 {
-    color: #decdbb;
-    font-size: clamp(2rem, 8vw, 5rem) !important;
-}
-
-/* Sections */
-section {
-    padding: 80px 20px 60px;
-    text-align: center;
-    width: 100%;
-    max-width: auto;
-    margin-top: 60px;
-}
-
-.container h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Footer */
-.footer {
-    background: #0aa394;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    max-width: auto;
-    margin-top: 60px;
-}
-
-  /* Mobile Menu */
-  .mobile-menu {
+/* Mobile Menu */
+.mobile-menu {
     position: fixed;
     top: 0;
     right: -250px;
@@ -165,9 +78,8 @@ section {
 .mobile-menu ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    text-align: center;
     width: 100%;
+    text-align: center;
 }
 
 .mobile-menu ul li {
@@ -175,35 +87,36 @@ section {
 }
 
 .mobile-menu ul li a {
-    color: white;
+    color: white !important;
     font-size: 18px;
     text-decoration: none;
     display: block;
     padding: 10px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .mobile-menu ul li a:hover {
-    background: #00aeff;
+    background: #ffcc00;
+    color: #000 !important;
 }
 
-.dropdown {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+/* Logo */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
 }
 
-.dropdown a {
-    font-size: 16px;
-    padding: 8px;
-    width: 100%;
+/* Menu Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.dropdown.active {
-    display: flex;
-}
-
+/* Close Menu Button */
 .close-menu {
     position: absolute;
     top: 15px;
@@ -213,12 +126,59 @@ section {
     color: white;
     font-size: 30px;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
 }
 
-.menu-toggle {
-    background: none;
-    border: none;
+.close-menu:hover {
+    color: #ffcc00; /* Gold color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+/* Hero Section */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #decdbb;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Team Section */
+.team-member img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    background: #0aa394;
     color: white;
-    font-size: 24px;
-    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
 }
