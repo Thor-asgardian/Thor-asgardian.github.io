@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
+    padding-top: 80px;
 }
 
 .wrapper {
@@ -23,6 +24,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 70px;
+    /* Ensures consistent navbar height */
     z-index: 1000;
 }
 
@@ -55,6 +58,12 @@ body {
 .nav ul li a:hover {
     color: #ffcc00 !important;
     /* Gold hover effect */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
 /* Mobile Menu */
@@ -102,40 +111,6 @@ body {
     color: #000 !important;
 }
 
-/* Logo */
-.logo {
-    width: 60px;
-    height: auto;
-    margin-right: 15px;
-}
-
-/* Menu Toggle Button */
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Close Menu Button */
-.close-menu {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease-in-out;
-}
-
-.close-menu:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
-
 /* Hero Section */
 .video-container {
     position: relative;
@@ -167,12 +142,27 @@ video {
 section {
     padding: 100px 20px;
     text-align: center;
+    padding-top: 100px;
 }
 
 /* Services Section */
 #services {
     background: #f4f4f4;
     padding: 100px 20px;
+    margin-top: 130px;
+    margin-bottom: 100px;
+    /* Added more space after services section */
+}
+
+/* Placement Section */
+#placement {
+    background: white;
+    padding: 100px 20px;
+    padding-top: 150px;
+    margin-top: 100px;
+    /* Added proper spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-item {
@@ -188,13 +178,6 @@ section {
 }
 
 /* Placement Section */
-#placement {
-    background: white;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .placement-logo {
     width: 120px;
     height: auto;
@@ -206,17 +189,6 @@ section {
     transform: scale(1.1);
 }
 
-/* Team Section */
-.team-member {
-    padding: 20px;
-}
-
-.team-member img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
 /* Footer */
 .footer {
     background: #0aa394;
@@ -224,15 +196,6 @@ section {
     padding: 20px;
     text-align: center;
     width: 100%;
-}
-
-/* Input Fields */
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 /* Headings */
@@ -259,6 +222,10 @@ h4 {
 
     .menu-toggle {
         font-size: 22px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
     }
 
     .mobile-menu {
@@ -378,7 +345,15 @@ h4 {
         align-items: center;
     }
 
-    .contact-form, .contact-details {
+    .contact-form,
+    .contact-details {
         width: 90%;
     }
+}
+
+#services,
+#placement {
+    padding-top: 120px;
+    /* Ensures visibility under navbar */
+    margin-top: 0;
 }
