@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="Stylesheet.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -24,38 +27,132 @@
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About us</a></li>
                 <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-                <li><a href="#placements" onclick="toggleMenu()">Placements</a></li>
+                <li><a href="#placement" onclick="toggleMenu()">Placement Partners</a></li>
                 <li><a href="#team" onclick="toggleMenu()">Our team</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
 
         <div id="home" class="video-container">
-            <video playsinline autoplay muted loop>
+            <video>
                 <source src="videobg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
         </div>
 
         <section id="about" class="container">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Sthavir Engineering Solutions Ltd. specializes in software design & development, Business Process
+                Automation (BPA), and Robotic Process Automation (RPA). We also offer IT training and resourcing
+                services.</p>
+            <p>Our team is composed of certified professionals dedicated to delivering cutting-edge solutions with the
+                latest technologies. We focus on agile methodologies to ensure high-quality results that exceed client
+                expectations.</p>
+            <p>We offer flexible engagement models, including onsite, remote, and offshore development, tailored to our
+                clients' needs. Our expertise covers Robotic Process Automation, SharePoint Branding & Development,
+                Business Process Improvement & Automation, Custom Software Development & Quality Assurance, and IT
+                Training & Resourcing.</p>
         </section>
 
-        <section id="services" class="container">
-            <h2>Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>Web Development</h3>
-                    <p>Modern, scalable, and responsive websites.</p>
+        <section id="services" class="container-fluid py-5">
+            <h2 class="text-center display-4">Our Services</h2>
+            <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-md-4 service-item">
+                                <h3>Digital Engineering</h3>
+                                <p>Modern, scalable, and responsive websites.</p>
+                            </div>
+                            <div class="col-md-4 service-item">
+                                <h3>Software Engineering</h3>
+                                <p>Strategies to grow online reach and engagement.</p>
+                            </div>
+                            <div class="col-md-4 service-item">
+                                <h3>Embedded Engineering</h3>
+                                <p>Expert advice for business optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-md-4 service-item">
+                                <h3>Silicon Engineering</h3>
+                                <p>Modern, scalable, and responsive websites.</p>
+                            </div>
+                            <div class="col-md-4 service-item">
+                                <h3>Mechanical Engineering</h3>
+                                <p>Strategies to grow online reach and engagement.</p>
+                            </div>
+                            <div class="col-md-4 service-item">
+                                <h3>Industrial Engineering</h3>
+                                <p>Expert advice for business optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-md-4">
-                    <h3>Digital Marketing</h3>
-                    <p>Strategies to grow online reach and engagement.</p>
+
+                <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="placement" class="container-fluid py-5">
+            <h2 class="text-center display-4">Placement Partners</h2>
+            <div id="placementCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <img src="google.png" alt="Google" class="placement-logo">
+                                <h4>Google</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="microsoft.png" alt="Microsoft" class="placement-logo">
+                                <h4>Microsoft</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="tesla.png" alt="Tesla" class="placement-logo">
+                                <h4>Tesla</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <img src="amazon.png" alt="Amazon" class="placement-logo">
+                                <h4>Amazon</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="facebook.png" alt="Facebook" class="placement-logo">
+                                <h4>Facebook</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="apple.png" alt="Apple" class="placement-logo">
+                                <h4>Apple</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h3>Consulting</h3>
-                    <p>Expert advice for business optimization.</p>
-                </div>
+
+                <a class="carousel-control-prev" href="#placementCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#placementCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
 
@@ -63,7 +160,7 @@
             <h2>Our Team</h2>
             <div class="row">
                 <div class="col-md-4 team-member">
-                    <img src="team1.jpg" alt="John Doe">
+                    <img src="team1.jpg" alt="Sthavir">
                     <h3>Sthavir</h3>
                     <p>CEO</p>
                 </div>
@@ -80,6 +177,28 @@
             </div>
         </section>
 
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Reach out to us using the form below or via our contact details.</p>
+        
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+        
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+        </section>        
+
         <footer class="footer">
             <p>&copy; 2025 Sthavir Engineering Solutions Ltd. All Rights Reserved.</p>
         </footer>
@@ -87,7 +206,8 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById("mobileMenu").classList.toggle("active");
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
         }
     </script>
 </body>
