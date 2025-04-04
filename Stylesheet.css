@@ -28,6 +28,7 @@ body {
 
 .nav h1 {
     margin: 0;
+    font-size: 1.8rem;
 }
 
 .nav ul {
@@ -52,14 +53,15 @@ body {
 }
 
 .nav ul li a:hover {
-    color: #ffcc00 !important; /* Gold hover effect */
+    color: #ffcc00 !important;
+    /* Gold hover effect */
 }
 
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -300px;
     width: 250px;
     height: 100vh;
     background: #0e968f;
@@ -102,7 +104,7 @@ body {
 
 /* Logo */
 .logo {
-    width: 50px;
+    width: 60px;
     height: auto;
     margin-right: 15px;
 }
@@ -112,7 +114,7 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
 }
 
@@ -130,10 +132,9 @@ body {
 }
 
 .close-menu:hover {
-    color: #ffcc00; /* Gold color on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #ffcc00;
+    transform: scale(1.1);
 }
-
 
 /* Hero Section */
 .video-container {
@@ -164,14 +165,56 @@ video {
 
 /* Sections */
 section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
+/* Services Section */
+#services {
+    background: #f4f4f4;
+    padding: 100px 20px;
+}
+
+.service-item {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+/* Placement Section */
+#placement {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.placement-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.placement-logo:hover {
+    transform: scale(1.1);
+}
+
 /* Team Section */
+.team-member {
+    padding: 20px;
+}
+
 .team-member img {
-    width: 100px;
+    width: 120px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -181,4 +224,161 @@ section {
     padding: 20px;
     text-align: center;
     width: 100%;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        font-size: 22px;
+    }
+
+    .mobile-menu {
+        width: 80%;
+    }
+
+    .video-container {
+        height: 70vh;
+    }
+
+    section {
+        padding: 60px 10px;
+    }
+
+    .service-item {
+        padding: 20px;
+    }
+
+    .placement-logo {
+        width: 100px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    background: #f4f4f4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-form .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0aa394;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form .btn-submit:hover {
+    background: #088a7c;
+}
+
+/* Contact Details */
+.contact-details {
+    text-align: left;
+    max-width: 450px;
+}
+
+.contact-details a {
+    color: #0aa394;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-details {
+        width: 90%;
+    }
 }
