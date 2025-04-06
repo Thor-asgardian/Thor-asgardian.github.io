@@ -9,130 +9,122 @@ body {
 
 /* Navigation */
 .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background-color: #000; /* Or your theme */
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      height: 40px;
-    }
-
-    .company-name {
-      font-size: 1.2rem;
-    }
-
-.nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav ul li a:hover {
-    color: #ffc107;
+.logo {
+    height: 40px;
 }
 
-/* Menu Toggle (☰) */
+.company-name {
+    font-size: 1.2rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
 .menu-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-}
-
-/* Mobile Menu */
-.menu-toggle {
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: white;
-      margin-left: auto;
-    }
-
-    .mobile-menu {
-      display: none;
-      width: 100%;
-      background-color: #000;
-      position: sticky;
-      top: 56px; /* height of navbar */
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      display: flex;
-      justify-content: center;
-    }
-
-    .mobile-menu ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0.5rem 1rem;
-    }
-
-    .mobile-menu ul li {
-      margin: 0 0.5rem;
-    }
-
-    .mobile-menu ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      display: inline-block;
-    }
-
-    /* Optional: Add hover effect */
-    .mobile-menu ul li a:hover {
-      background-color: #222;
-      border-radius: 5px;
-    }
-
-.close-menu {
-    position: absolute;
-    top: 10px;
-    right: 20px;
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
 }
 
-.nav-links-mobile {
+.mobile-menu {
+    display: none;
+    background-color: #000;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
     display: flex;
     justify-content: center;
-    background-color: #003366;
-    padding: 0.5rem 0;
-    margin: 0;
-    position: sticky;
-    top: 56px;
-    /* adjust based on navbar height */
-    z-index: 998;
-    list-style: none;
+}
+
+.mobile-menu ul {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
 }
 
-.nav-links-mobile li {
-    margin: 0 8px;
+.mobile-menu ul li {
+    margin: 0 0.5rem;
 }
 
-.nav-links-mobile a {
+.mobile-menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 0.95rem;
-    padding: 4px 6px;
-    display: inline-block;
+    padding: 0.5rem 0.75rem;
 }
 
-.nav-links-mobile a:hover {
-    color: #ffc107;
+.mobile-menu ul li a:hover {
+    background-color: #222;
+    border-radius: 4px;
+}
+
+/* Mobile Navigation Visibility */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+    }
+
+    .video-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .video-container p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+/* Desktop Navigation */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav ul li {
+        margin-left: 1rem;
+    }
+
+    .nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem;
+    }
+
+    .nav ul li a:hover {
+        color: #ffc107;
+    }
 }
 
 /* Hero Section */
@@ -209,33 +201,6 @@ footer {
     background-color: #003366;
     color: white;
     font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav ul {
-        display: none;
-    }
-
-    .video-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .video-container p {
-        font-size: 1rem;
-    }
-
-    section {
-        padding: 1rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: none !important;
-    }
+    padding: 1rem;
+    margin-top: 2rem;
 }
