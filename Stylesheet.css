@@ -70,16 +70,14 @@ body {
 
 /* Mobile Menu */
 .mobile-menu {
-    display: none;
-    position: sticky;
-    top: 56px;
-    background-color: #003366;
-    z-index: 999;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  position: sticky;
+  top: 56px; /* or height of your main nav */
+  background-color: #003366;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
 }
 
 .mobile-menu.active {
