@@ -1,359 +1,203 @@
-/* General Styles */
+/* General */
 body {
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    padding-top: 80px;
 }
 
-.wrapper {
-    width: 100%;
-}
-
-/* Navbar */
+/* Navigation */
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background: #0aa394;
+    justify-content: space-between;
+    background: #003366;
+    padding: 0.5rem 1rem;
     color: white;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    /* Ensures consistent navbar height */
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav h1 {
-    margin: 0;
-    font-size: 1.8rem;
+.logo {
+    height: 40px;
 }
 
 .nav ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
     margin: 0;
     padding: 0;
-    padding-right: 20px;
+    display: flex;
 }
 
 .nav ul li {
-    padding: 5px;
+    margin: 0 10px;
 }
 
-/* Navbar Links */
 .nav ul li a {
-    color: white !important;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    font-weight: 500;
 }
 
 .nav ul li a:hover {
-    color: #ffcc00 !important;
-    /* Gold hover effect */
+    color: #ffc107;
 }
 
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+/* Menu Toggle (☰) */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
 }
 
 /* Mobile Menu */
 .mobile-menu {
+    display: none;
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 250px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
     height: 100vh;
-    background: #0e968f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 1100;
+    z-index: 999;
     padding-top: 60px;
+    text-align: center;
 }
 
 .mobile-menu.active {
-    right: 0;
+    display: block;
 }
 
 .mobile-menu ul {
     list-style: none;
     padding: 0;
-    width: 100%;
-    text-align: center;
 }
 
-.mobile-menu ul li {
-    margin: 10px 0;
+.mobile-menu li {
+    margin: 20px 0;
 }
 
-.mobile-menu ul li a {
-    color: white !important;
-    font-size: 18px;
+.mobile-menu a {
+    font-size: 1.2rem;
+    color: #333;
     text-decoration: none;
-    display: block;
-    padding: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.mobile-menu ul li a:hover {
-    background: #ffcc00;
-    color: #000 !important;
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #000;
 }
 
 /* Hero Section */
 .video-container {
     position: relative;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
     margin-top: 60px;
+    scroll-margin-top: 80px;
 }
 
-video {
-    object-fit: cover;
+.video-container video {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
 }
 
-.header {
+.video-container .header {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
-    color: #decdbb;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.video-container h1 {
+    font-size: 2.5rem;
+}
+
+.video-container p {
+    font-size: 1.25rem;
 }
 
 /* Sections */
 section {
-    padding: 100px 20px;
-    text-align: center;
-    padding-top: 100px;
-}
-
-/* Services Section */
-#services {
-    background: #f4f4f4;
-    padding: 100px 20px;
-    margin-top: 130px;
-    margin-bottom: 100px;
-    /* Added more space after services section */
-}
-
-/* Placement Section */
-#placement {
-    background: white;
-    padding: 100px 20px;
-    padding-top: 150px;
-    margin-top: 100px;
-    /* Added proper spacing */
+    background-color: #f8f9fa;
+    margin-bottom: 2rem;
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 80px;
 }
 
-.service-item {
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+#contact {
+    background-color: #e9ecef;
+    border-radius: 8px;
 }
 
-.service-item:hover {
-    transform: scale(1.05);
+#contact h2 {
+    color: #003366;
+    font-weight: 700;
 }
 
-/* Placement Section */
-.placement-logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+#contact .form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
 }
 
-.placement-logo:hover {
-    transform: scale(1.1);
+#contact .btn-primary {
+    background-color: #003366;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#contact .btn-primary:hover {
+    background-color: #00509e;
 }
 
 /* Footer */
-.footer {
-    background: #0aa394;
+footer {
+    background-color: #003366;
     color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-/* Headings */
-h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .nav h1 {
-        font-size: 1.5rem;
-    }
-
-    .menu-toggle {
-        font-size: 22px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    .mobile-menu {
-        width: 80%;
-    }
-
-    .video-container {
-        height: 70vh;
-    }
-
-    section {
-        padding: 60px 10px;
-    }
-
-    .service-item {
-        padding: 20px;
-    }
-
-    .placement-logo {
-        width: 100px;
-    }
-
-    .footer {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 2.2rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Contact Section */
-#contact {
-    background: #f4f4f4;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-/* Contact Form */
-.contact-form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-}
-
-.contact-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.contact-form .btn-submit {
-    width: 100%;
-    padding: 12px;
-    background: #0aa394;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-form .btn-submit:hover {
-    background: #088a7c;
-}
-
-/* Contact Details */
-.contact-details {
-    text-align: left;
-    max-width: 450px;
-}
-
-.contact-details a {
-    color: #0aa394;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
+    font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
-        align-items: center;
+    .nav ul {
+        display: none;
     }
 
-    .contact-form,
-    .contact-details {
-        width: 90%;
+    .video-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .video-container p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1rem;
     }
 }
 
-#services,
-#placement {
-    padding-top: 120px;
-    /* Ensures visibility under navbar */
-    margin-top: 0;
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
 }
