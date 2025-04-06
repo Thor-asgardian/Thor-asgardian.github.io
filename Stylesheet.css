@@ -37,6 +37,7 @@ body {
 .logo {
     width: 40px;
     height: auto;
+    border-radius: 50%;
 }
 
 .nav ul {
