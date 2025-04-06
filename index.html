@@ -2,213 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Corporate Website</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="Stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sthavir Engineering Solutions Ltd.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Stylesheet.css" />
+  <style>
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="nav">
-            <img src="Sthavir2.png" alt="Logo" class="logo">
-            <h1>Sthavir Engineering Solutions Ltd.</h1>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        </nav>
 
-        <div class="mobile-menu" id="mobileMenu">
-            <button class="close-menu" onclick="toggleMenu()">&times;</button>
-            <ul>
-                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#about" onclick="toggleMenu()">About us</a></li>
-                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-                <li><a href="#placement" onclick="toggleMenu()">Placement Partners</a></li>
-                <li><a href="#team" onclick="toggleMenu()">Our team</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </ul>
-        </div>
+  <nav class="nav">
+    <img src="Sthavir2.png" alt="Logo" class="logo" />
+    <h1 class="h5 mb-0 text-center flex-grow-1">Sthavir Engineering Solutions Ltd.</h1>
+    <button class="menu-toggle d-md-none" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
 
-        <div id="home" class="video-container">
+    <!-- Desktop Navigation -->
+    <ul class="d-none d-md-flex mb-0">
+      <li><a href="#home" class="px-2">Home</a></li>
+      <li><a href="#about" class="px-2">About</a></li>
+      <li><a href="#services" class="px-2">Services</a></li>
+      <li><a href="#placement" class="px-2">Placement</a></li>
+      <li><a href="#team" class="px-2">Team</a></li>
+      <li><a href="#contact" class="px-2">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <button class="close-menu" onclick="toggleMenu()" aria-label="Close navigation">×</button>
+    <ul>
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+      <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+      <li><a href="#placement" onclick="toggleMenu()">Placement Partners</a></li>
+      <li><a href="#team" onclick="toggleMenu()">Our Team</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+    <main>
+        <div id="home" class="video-container position-relative">
             <video>
                 <source src="videobg.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div class="header">
+                <h1>Welcome to Sthavir Engineering Solutions Ltd.</h1>
+                <p>Innovating Tomorrow, Today.</p>
+            </div>
         </div>
 
-        <section id="about" class="container">
+        <section id="about" class="container py-5">
             <h2>About Us</h2>
-            <p>Sthavir Engineering Solutions Ltd. specializes in software design & development, Business Process
-                Automation (BPA), and Robotic Process Automation (RPA). We also offer IT training and resourcing
-                services.</p>
-            <p>Our team is composed of certified professionals dedicated to delivering cutting-edge solutions
-                with the
-                latest technologies. We focus on agile methodologies to ensure high-quality results that exceed
-                client
-                expectations.</p>
-            <p>We offer flexible engagement models, including onsite, remote, and offshore development, tailored
-                to our
-                clients' needs. Our expertise covers Robotic Process Automation, SharePoint Branding &
-                Development,
-                Business Process Improvement & Automation, Custom Software Development & Quality Assurance, and
-                IT
-                Training & Resourcing.</p>
-        </section> <br>
-
-        <section id="services" class="container-fluid py-5"><br> <br>
-            <h2 class="text-center display-4">Our Services</h2>
-            <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-4 service-item">
-                                <h3>Digital Engineering</h3>
-                                <p>Modern, scalable, and responsive websites.</p>
-                            </div>
-                            <div class="col-md-4 service-item">
-                                <h3>Software Engineering</h3>
-                                <p>Strategies to grow online reach and engagement.</p>
-                            </div>
-                            <div class="col-md-4 service-item">
-                                <h3>Embedded Engineering</h3>
-                                <p>Expert advice for business optimization.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row text-center">
-                            <div class="col-md-4 service-item">
-                                <h3>Silicon Engineering</h3>
-                                <p>Modern, scalable, and responsive websites.</p>
-                            </div>
-                            <div class="col-md-4 service-item">
-                                <h3>Mechanical Engineering</h3>
-                                <p>Strategies to grow online reach and engagement.</p>
-                            </div>
-                            <div class="col-md-4 service-item">
-                                <h3>Industrial Engineering</h3>
-                                <p>Expert advice for business optimization.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </section> <br>
-
-        <section id="placement" class="container-fluid py-5"> <br> <br>
-            <h2 class="text-center display-4">Placement Partners</h2>
-            <div id="placementCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <img src="google.png" alt="Google" class="placement-logo">
-                                <h4>Google</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="microsoft.png" alt="Microsoft" class="placement-logo">
-                                <h4>Microsoft</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="tesla.png" alt="Tesla" class="placement-logo">
-                                <h4>Tesla</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row text-center">
-                            <div class="col-md-4">
-                                <img src="amazon.png" alt="Amazon" class="placement-logo">
-                                <h4>Amazon</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="facebook.png" alt="Facebook" class="placement-logo">
-                                <h4>Facebook</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="apple.png" alt="Apple" class="placement-logo">
-                                <h4>Apple</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a class="carousel-control-prev" href="#placementCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#placementCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            <p>Sthavir Engineering Solutions Ltd. is a leading provider of cutting-edge engineering solutions tailored
+                for
+                various industries. Our team of experienced professionals is dedicated to delivering excellence and
+                innovation
+                in every project.</p>
         </section>
 
-        <section id="team" class="container">
-            <h2>Our Team</h2>
+        <section id="services" class="container py-5">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Mechanical Design and Engineering</li>
+                <li>Product Development</li>
+                <li>Prototyping and Testing</li>
+                <li>Automation Solutions</li>
+            </ul>
+        </section>
+
+        <section id="placement" class="container py-5">
+            <h2>Placement Partners</h2>
+            <p>We proudly collaborate with top-tier companies to offer career opportunities to our trainees and
+                partners. Our
+                placement network includes organizations in manufacturing, automation, and product development sectors.
+            </p>
+        </section>
+
+        <section id="team" class="container py-5">
+            <h2 class="text-center mb-5">Our Team</h2>
             <div class="row">
-                <div class="col-md-4 team-member">
-                    <img src="team1.jpg" alt="Sthavir">
+                <div class="col-md-4 text-center">
+                    <img src="team1.jpg" alt="Sthavir" class="img-fluid rounded-circle mb-3"
+                        style="width: 150px; height: 150px; object-fit: cover;">
                     <h3>Sthavir</h3>
                     <p>CEO</p>
                 </div>
-                <div class="col-md-4 team-member">
-                    <img src="team2.jpg" alt="Jane Smith">
+                <div class="col-md-4 text-center">
+                    <img src="team2.jpg" alt="Jane Smith" class="img-fluid rounded-circle mb-3"
+                        style="width: 150px; height: 150px; object-fit: cover;">
                     <h3>Jane Smith</h3>
                     <p>Chief Marketing Officer</p>
                 </div>
-                <div class="col-md-4 team-member">
-                    <img src="team3.jpg" alt="Alice Johnson">
+                <div class="col-md-4 text-center">
+                    <img src="team3.jpg" alt="Alice Johnson" class="img-fluid rounded-circle mb-3"
+                        style="width: 150px; height: 150px; object-fit: cover;">
                     <h3>Alice Johnson</h3>
                     <p>Lead Developer</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <h2>Contact Us</h2>
-            <p>We’d love to hear from you! Reach out to us using the form below or via our contact details.</p>
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your name">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
-                        <button type="submit" class="btn-submit">Send Message</button>
+        <section id="contact" class="container py-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-sm-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4"
+                                placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">Send</button>
                     </form>
                 </div>
             </div>
         </section>
+    </main>
 
-        <footer class="footer">
-            <p>&copy; 2025 Sthavir Engineering Solutions Ltd. All Rights Reserved.</p>
-        </footer>
-    </div>
+    <footer class="text-center py-3 bg-dark text-light">
+        <p>&copy; 2025 Sthavir Engineering Solutions Ltd. All rights reserved.</p>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function toggleMenu() {
-            const menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("active");
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
         }
     </script>
 </body>
