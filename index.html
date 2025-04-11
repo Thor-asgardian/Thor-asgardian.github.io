@@ -2,143 +2,157 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sthavir Engineering Solutions Ltd.</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="Stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sthavir Engineering Solutions Ltd.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Stylesheet.css">
 </head>
 
 <body>
-    <nav class="nav">
-  <div class="brand d-flex align-items-center">
-    <img src="Sthavir2.png" alt="Logo" class="logo mr-2" />
-    <h1 class="company-name">Sthavir Engineering Solutions Ltd.</h1>
-  </div>
-  <button class="menu-toggle d-md-none" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
-  <ul class="d-none d-md-flex mb-0">
-    <li><a href="#home" class="px-2">Home</a></li>
-    <li><a href="#about" class="px-2">About</a></li>
-    <li><a href="#services" class="px-2">Services</a></li>
-    <li><a href="#placement" class="px-2">Placement</a></li>
-    <li><a href="#team" class="px-2">Team</a></li>
-    <li><a href="#contact" class="px-2">Contact</a></li>
-  </ul>
-</nav>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Sthavir2.png" alt="Logo" />
+                <span>Sthavir Engineering</span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#software">Software</a>
+                        <a class="dropdown-item" href="#hardware">Hardware</a>
+                    </div>
+                </li>
+                <li><a href="#placement">Placement</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu">
-  <ul>
-    <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-    <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-    <li><a href="#placement" onclick="toggleMenu()">Placement</a></li>
-    <li><a href="#team" onclick="toggleMenu()">Team</a></li>
-    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-  </ul>
-</div>
-  
-    <main>
-        <div id="home" class="video-container position-relative">
-            <video>
-                <source src="videobg.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="header">
-                <h1>Welcome to Sthavir Engineering Solutions Ltd.</h1>
-                <p>Innovating Tomorrow, Today.</p>
+    <div id="mobileMenu" class="mobile-menu">
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#software" onclick="toggleMenu()">Software Services</a></li>
+            <li><a href="#hardware" onclick="toggleMenu()">Hardware Services</a></li>
+            <li><a href="#placement" onclick="toggleMenu()">Placement</a></li>
+            <li><a href="#team" onclick="toggleMenu()">Team</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="home" class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="videobg.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="header">
+          <h1>Empowering Innovation</h1>
+          <p>Engineering Excellence for the Modern World</p>
+        </div>
+      </div>
+
+    <section id="about" class="container py-5">
+        <h2>About Us</h2>
+        <p>Sthavir Engineering Solutions Ltd. is a leading provider of cutting-edge engineering solutions tailored for
+            various industries...</p>
+    </section>
+
+    <section id="software" class="container py-5">
+        <h2>Software Services</h2>
+        <ul>
+            <li>Automation Software</li>
+            <li>Custom Application Development</li>
+            <li>Web-based Engineering Tools</li>
+        </ul>
+    </section>
+
+    <section id="hardware" class="container py-5">
+        <h2>Hardware Services</h2>
+        <ul>
+            <li>Mechanical Design and Engineering</li>
+            <li>Product Development</li>
+            <li>Prototyping and Testing</li>
+            <li>Automation Solutions</li>
+        </ul>
+    </section>
+
+    <section id="placement" class="container py-5">
+        <h2>Placement Partners</h2>
+        <p>We proudly collaborate with top-tier companies to offer career opportunities to our trainees and
+            partners. Our placement network includes organizations in manufacturing, automation, and product
+            development sectors.</p>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="container py-5">
+        <h2 class="text-center mb-5">Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="team1.jpg" alt="Sthavir" class="img-fluid rounded-circle mb-3"
+                    style="width: 150px; height: 150px; object-fit: cover;">
+                <h3>Sthavir</h3>
+                <p>CEO</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="team2.jpg" alt="Jane Smith" class="img-fluid rounded-circle mb-3"
+                    style="width: 150px; height: 150px; object-fit: cover;">
+                <h3>Jane Smith</h3>
+                <p>Chief Marketing Officer</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="team3.jpg" alt="Alice Johnson" class="img-fluid rounded-circle mb-3"
+                    style="width: 150px; height: 150px; object-fit: cover;">
+                <h3>Alice Johnson</h3>
+                <p>Lead Developer</p>
             </div>
         </div>
+    </section>
 
-        <section id="about" class="container py-5">
-            <h2>About Us</h2>
-            <p>Sthavir Engineering Solutions Ltd. is a leading provider of cutting-edge engineering solutions tailored
-                for
-                various industries. Our team of experienced professionals is dedicated to delivering excellence and
-                innovation
-                in every project.</p>
-        </section>
-
-        <section id="services" class="container py-5">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Mechanical Design and Engineering</li>
-                <li>Product Development</li>
-                <li>Prototyping and Testing</li>
-                <li>Automation Solutions</li>
-            </ul>
-        </section>
-
-        <section id="placement" class="container py-5">
-            <h2>Placement Partners</h2>
-            <p>We proudly collaborate with top-tier companies to offer career opportunities to our trainees and
-                partners. Our
-                placement network includes organizations in manufacturing, automation, and product development sectors.
-            </p>
-        </section>
-
-        <section id="team" class="container py-5">
-            <h2 class="text-center mb-5">Our Team</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="team1.jpg" alt="Sthavir" class="img-fluid rounded-circle mb-3"
-                        style="width: 150px; height: 150px; object-fit: cover;">
-                    <h3>Sthavir</h3>
-                    <p>CEO</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="team2.jpg" alt="Jane Smith" class="img-fluid rounded-circle mb-3"
-                        style="width: 150px; height: 150px; object-fit: cover;">
-                    <h3>Jane Smith</h3>
-                    <p>Chief Marketing Officer</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="team3.jpg" alt="Alice Johnson" class="img-fluid rounded-circle mb-3"
-                        style="width: 150px; height: 150px; object-fit: cover;">
-                    <h3>Alice Johnson</h3>
-                    <p>Lead Developer</p>
-                </div>
+    <!-- Contact -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4"
+                            placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Send</button>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="container py-5">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-sm-12">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea class="form-control" id="message" rows="4"
-                                placeholder="Write your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-2">Send</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="text-center py-3 bg-dark text-light">
+    <!-- Footer -->
+    <footer class="text-center">
         <p>&copy; 2025 Sthavir Engineering Solutions Ltd. All rights reserved.</p>
-    </footer>
+      </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
