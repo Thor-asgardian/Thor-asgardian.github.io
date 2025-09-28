@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MassGreenNest - Eco-Friendly Products</title>
+<link rel="stylesheet" href="Style.css"> 
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-container">
+        <div class="logo-container" onclick="showPage('home')">
+            <div class="logo">MassGreenNest</div>
+            <div class="tagline">Eco-friendly Products</div>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <button class="search-btn">🔍</button>
+        </div>
+        
+        <div class="user-section" id="loggedInSection" style="display:none;">
+            <span class="user-greeting">Hello, <span id="userName"></span></span>
+            <a class="orders-link" onclick="showPage('orders'); displayOrders();">📦 Orders</a>
+            <a id="cartLink" class="cart-link" href="#">🛒 Cart <span id="cartBadge">0</span></a>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        
+        <div class="user-section" id="loggedOutSection" style="display:none;">
+            <button class="login-btn" onclick="showPage('login')">Login</button>
+        </div>
+    </div>
+</header>
+
+<div id="loginPage" class="page">
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Email" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Password" id="loginPassword" required>
+            </div>
+            <button type="submit" class="login-btn-full">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#" onclick="showPage('register')">Register</a></p>
+    </div>
+</div>
+
+<div id="registerPage" class="page">
+    <div class="login-container register-container">
+        <h2 class="login-title">Register</h2>
+        <form onsubmit="handleRegister(event)">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Full Name" id="registerFullName" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Email" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Password" id="registerPassword" required>
+            </div>
+            <button type="submit" class="login-btn-full">Register</button>
+        </form>
+        <p class="signup-link">Already have an account? <a href="#" onclick="showPage('login')">Login</a></p>
+    </div>
+</div>
+
+<div id="homePage" class="page active">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Eco-Friendly Essentials</h1>
+            <p>Discover sustainable products for a greener future</p>
+            <button class="cta-btn" onclick="document.querySelector('.products-section').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="categories-container">
+            <button class="category-btn active" data-category="all">All Products</button>
+            <button class="category-btn" data-category="banana-fiber">Banana Fiber</button>
+            <button class="category-btn" data-category="terracotta">Terracotta</button>
+            <button class="category-btn" data-category="palm-leaf">Palm Leaf</button>
+            <button class="category-btn" data-category="handmade-paper">Handmade Paper</button>
+            <button class="category-btn" data-category="ceramic-wooden">Ceramic & Wooden</button>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2>Our Products</h2>
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+</div>
+
+<div id="cartPage" class="page">
+    <div class="cart-container">
+        <h2 class="page-title">Shopping Cart</h2>
+        <div id="cartItems">
+            </div>
+        <div id="cartSummary" class="cart-summary" style="display:none;">
+            <div class="summary-row">Subtotal: <span>₹<span id="subtotal">0</span></span></div>
+            <div class="summary-row">Shipping: <span>₹<span id="shipping">50</span></span></div>
+            <div class="summary-row">Tax (5%): <span>₹<span id="tax">0</span></span></div>
+            <div class="summary-row total">Total: <span>₹<span id="total">0</span></span></div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+        <div id="emptyCart" class="empty-state" style="display:none;">
+            <h3>Your cart is empty 🙁</h3>
+            <p>Looks like you haven't added anything yet.</p>
+            <button class="continue-shopping" onclick="showPage('home')">Continue Shopping</button>
+        </div>
+    </div>
+</div>
+
+<div id="ordersPage" class="page">
+    <div class="orders-container">
+        <h2 class="page-title">My Orders</h2>
+        <div id="ordersList">
+            </div>
+    </div>
+</div>
+
+<script src="Script.js"></script>
+
+</body>
+</html>
